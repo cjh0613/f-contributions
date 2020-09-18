@@ -1,0 +1,17 @@
+name: run f-contributions
+on:
+  schedule:
+    #- cron: "*/30 * * * *"
+jobs:
+  update-gist:
+    runs-on: ubuntu-latest
+    steps:
+      - name: xxxx #随便填
+      env:
+        BAIDU_TOKEN: ${{ secrets.BAIDU_TOKEN }} # 注意这里，其他的都是浮云
+        BING_TOKEN: ${{ secrets.BING_TOKEN }} # 注意这里，其他的都是浮云
+      run: |
+        npm i -g hexo-cli # 安装hexo
+        npm i
+        ……
+        hexo deploy
